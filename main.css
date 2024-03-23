@@ -143,3 +143,50 @@ body {
   font-weight: bold;
   color: #fff;
 }
+
+.main-content {
+  background-color: var(--bg-primary-color);
+}
+
+.main-content {
+  background-color: var(--bg-primary-color);
+  grid-area: project;
+}
+
+.project-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  color: #fff;
+  padding: 1rem;
+}
+
+.project-section article {
+  padding: 1rem;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.project-section-icons {
+  align-self: flex-end;
+}
+
+.profile-info {
+  background-color: red;
+}
+
+.side-container {
+  grid-area: sideContainer;
+
+  background-color: var(--bg-primary-color);
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
