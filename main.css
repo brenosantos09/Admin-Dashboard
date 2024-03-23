@@ -9,8 +9,8 @@
 :root {
   --gap: 1rem;
   --bg-black-clr: #000;
-  --bg-primary-color: #191c24;
-  --secondary-color: #af1763;
+  --bg-primary-color: #121212;
+  --secondary-color: #282828;
 }
 
 img {
@@ -37,7 +37,7 @@ body {
 
 .header {
   grid-area: header;
-  background-color: var(--bg-primary-color);
+  background-color: var(--secondary-color);
   display: grid;
   grid-template-columns: 1.3fr 1fr;
   gap: 3rem;
@@ -106,7 +106,7 @@ body {
   border-radius: 2rem;
   cursor: pointer;
   font-weight: bold;
-  background-color: var(--bg-primary-color);
+  background-color: var(--secondary-color);
 }
 .sidebar {
   grid-area: sidebar;
@@ -152,23 +152,29 @@ body {
   background-color: var(--bg-primary-color);
   grid-area: project;
 }
-
+.main-content h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 1rem;
+}
 .project-section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 3rem;
   color: #fff;
   padding: 1rem;
 }
 
 .project-section article {
   padding: 1rem;
-  border: 1px solid black;
-
+  border-left: 5px solid black;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.75);
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .project-section-icons {
@@ -181,12 +187,58 @@ body {
 
 .side-container {
   grid-area: sideContainer;
-
-  background-color: var(--bg-primary-color);
+  background-color: var(--secondary-color);
   color: #fff;
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
+}
+
+.announcements {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+.announcements article {
+  padding: 0.8rem;
+}
+.announcements h2 {
+  font-size: 1rem;
+}
+
+.trending-topics {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  flex-wrap: wrap;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.75);
+}
+
+.trending-items {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+.trending-topics img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.trending-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.trending-topic h2 {
+  margin-bottom: 1rem;
 }
