@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gap: 1rem;
+  --bg-black-clr: #000;
+  --bg-primary-color: #191c24;
+  --secondary-color: #af1763;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+  background-color: var(--bg-black-clr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "sidebar header header header"
+    "sidebar project project sideContainer"
+    "sidebar project project sideContainer"
+    "sidebar project project sideContainer";
+  gap: 0.5rem;
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background-color: var(--bg-primary-color);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 3rem;
+  padding: 2rem;
+  color: #fff;
+}
+
+.search-bar,
+.user-perfil,
+.user-welcome {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search-bar i {
+  font-size: 1.5rem;
+}
+.search-bar input {
+  border: 0;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.user-perfil {
+  display: flex;
+  gap: var(--gap);
+  margin-left: 3rem;
+}
+
+.user-perfil i {
+  font-size: 1.5rem;
+}
+
+.user-perfil-img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.user-welcome {
+  display: flex;
+  gap: var(--gap);
+}
+
+.user-welcome {
+  color: #000;
+  font-weight: bold;
+}
+
+.user-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-actions button {
+  padding: 1rem;
+  border: 1px solid black;
+  outline: 0;
+  font-size: 1rem;
+  color: #fff8f8;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: var(--bg-primary-color);
+}
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--bg-primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 1rem;
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+}
+
+.sidebar-list li {
+  display: flex;
+  gap: 1rem;
+}
+
+.sidebar-list i {
+  color: #fff;
+}
+
+.sidebar-list a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
