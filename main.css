@@ -254,7 +254,7 @@ body {
   gap: 0.5rem;
 }
 
-.trending-topic h2 {
+.trending-topic-wrapper h2 {
   margin-bottom: 1rem;
 }
 
@@ -272,5 +272,19 @@ body {
     gap: 0.5rem;
     min-height: 100vh;
     margin: 0 auto;
+  }
+
+  .header {
+    gap: 3rem;
+  }
+
+  .trending-topic-wrapper {
+    text-align: center;
+  }
+  .trending-topics {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
