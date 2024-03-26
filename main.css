@@ -19,15 +19,19 @@ img {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg-black-clr);
 }
 
 .wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
   background-color: var(--bg-black-clr);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-areas:
-    "sidebar header header header"
+    "header header header header"
     "sidebar project project sideContainer"
     "sidebar project project sideContainer"
     "sidebar project project sideContainer";
@@ -38,11 +42,18 @@ body {
 .header {
   grid-area: header;
   background-color: var(--secondary-color);
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 3rem;
-  padding: 2rem;
+
+  display: flex;
+  justify-content: space-between;
   color: #fff;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.user-actions-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .search-bar,
@@ -53,8 +64,13 @@ body {
   gap: 1rem;
 }
 
+.search-bar {
+  padding: 2rem;
+}
 .search-bar i {
   font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
 }
 .search-bar input {
   border: 0;
@@ -67,7 +83,6 @@ body {
 .user-perfil {
   display: flex;
   gap: var(--gap);
-  margin-left: 3rem;
 }
 
 .user-perfil i {
@@ -83,8 +98,7 @@ body {
 }
 
 .user-welcome {
-  display: flex;
-  gap: var(--gap);
+  align-self: center;
 }
 
 .user-welcome {
@@ -114,7 +128,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 3rem 1rem;
+  padding: 1rem;
 }
 
 .sidebar h2 {
@@ -159,7 +173,8 @@ body {
 }
 .project-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
+  /* grid-template-columns: repeat(2, 1fr); */
   gap: 3rem;
   color: #fff;
   padding: 1rem;
@@ -241,4 +256,21 @@ body {
 
 .trending-topic h2 {
   margin-bottom: 1rem;
+}
+
+/*mobile*/
+
+@media only screen and (max-width: 747px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "header header header header"
+      "sidebar sidebar sidebar sidebar"
+      "project project project project"
+      "sideContainer sideContainer sideContainer sideContainer";
+    gap: 0.5rem;
+    min-height: 100vh;
+    margin: 0 auto;
+  }
 }
